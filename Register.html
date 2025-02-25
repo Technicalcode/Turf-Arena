@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Arena Registration</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+       body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #58f9ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    
+}
+
+h2 a {
+    color: #0072ff;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input[type="file"] {
+    padding: 5px;
+    background: #f9f9f9;
+}
+
+input[type="submit"] {
+    background: #0072ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+input[type="submit"]:hover {
+    background: #005bb5;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 10px;
+}
+
+.terms input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.condition {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.Terms-condition {
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.Terms-condition h1 {
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.Terms-condition p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    padding: 10px;
+    background: #f1f1f1;
+    border-left: 4px solid #007bff;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* Media Query for iPhone SE (and small screens) */
+@media (max-width: 400px) {
+     body{
+     height: 330vh;
+     }
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+    h2 a {
+        font-size: 18px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input, select, textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .Terms-condition {
+        padding: 15px;
+    }
+    .Terms-condition p {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 391px) {
+     body{
+     height: 270vh;
+     }
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+    h2 a {
+        font-size: 18px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input, select, textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .Terms-condition {
+        padding: 15px;
+    }
+    .Terms-condition p {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 376px) {
+     body{
+     height: 330vh;
+     }
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+    h2 a {
+        font-size: 18px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input, select, textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .Terms-condition {
+        padding: 15px;
+    }
+    .Terms-condition p {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+.button {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button:active {
+    background-color: #004085;
+}
+
+
+#btn-print{
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="content">
+        <h2><a href="index.html">Turf Arena Registration - IDPL, Rishikesh</a></h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="494169aa-99ac-40bf-aa42-7edb80d0b4a9">
+            <label for="photo">Upload Photograph:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" required>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            
+        
+            
+            <label for="guardian_name">Parents/Guardian Name:</label>
+            <input type="text" id="guardian_name" name="guardian_name" required>
+            
+            <label for="guardian_phone">Parents/Guardian Phone No:</label>
+            <input type="tel" id="guardian_phone" name="guardian_phone" required>
+            
+            <label for="guardian_email">Parents/Guardian Email ID:</label>
+            <input type="email" id="guardian_email" name="guardian_email" required>
+            
+            <label for="date">Date of Birth:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="game">Select Category:</label>
+            <select id="game" name="game" required>
+                <option value="Football">Football</option>
+                <option value="Cricket">Cricket</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Badminton">Badminton</option>
+            </select>
+            
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time" required>
+            
+           <div class="condition">
+            <div class="Terms-condition">
+                <h1>TERMS & CONDITIONS</h1>
+                
+                <p>1. Please attach: One recent photograph and passport photo, along with an email ID.</p>
+                
+                <p>2. Fees should be paid in advance for the month.  
+                   - New students joining after the first week of the month will be charged pro-rated fees for the current month plus fees for the subsequent month.</p>
+                
+                <p>3. A joining fee of AED 150/- applies to all students at the time of registration.</p>
+                
+                <p>4. A 25% sibling discount applies from the second child onwards.</p>
+                
+                <p>5. No make-up sessions will be offered for missed classes.  
+                   - Strictly no refunds without the submission of a medical certificate.</p>
+                
+                <p>6. The parent/guardian must ensure that the participant is physically fit and able to participate in sporting activities.  
+                   - By enrolling, you accept all risks resulting from participation in the course.</p>
+                
+                <p>7. By signing above, the parent/legal guardian confirms that the player has no known physical or mental condition preventing them from participating in the sport or related activities, including physical fitness sessions.</p>
+            </div>
+           </div>
+            
+
+
+        </div> 
+
+           
+        <button href="" id="btn-print">Download print</button>
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the Terms & Conditions</label>
+            </div>
+             
+            <button type="submit" class="button">Register</button>
+
+        </form>
+    </div>
+                 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn-print').click(function () {
+                $('#content').printThis();
+            });
+        });
+    </script>
+    
+</body>
+</html>

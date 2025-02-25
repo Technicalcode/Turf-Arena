@@ -1,0 +1,860 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* Header Background */
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(12, 13, 12, 0.6), rgba(15, 16, 15, 0.3)), url('./WhatsApp\ Image\ 2025-02-24\ at\ 9.51.22\ PM.jpeg');
+    /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('./den-harrson-Ethe1yefaYk-unsplash.jpg'); */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    
+    
+   
+   
+
+}
+
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    
+}
+
+/* Logo */
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+}
+
+/* Navigation Links */
+.navlink {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    background: rgba(57, 60, 60, 0.95);
+    text-align: center;
+    transition: top 0.5s ease-in-out;
+    padding: 40px 0;
+    
+  
+}
+
+.navlink ul {
+    list-style: none;
+}
+
+.navlink ul li {
+    margin: 20px 0;
+}
+
+.navlink ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    letter-spacing: 1px;
+}
+
+.navlink ul li a:hover {
+    color: #ff5a5f;
+    transform: translateY(-5px);
+}
+
+/* Show Navbar When Open */
+.navlink.open {
+    top: 0;
+}
+
+/* Menu Icons */
+.open-menu, .close-menu {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.open-menu:hover, .close-menu:hover {
+    transform: scale(1.2);
+}
+
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    color: white;
+    padding: 60px 20px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 span {
+    color: #f8d210;
+}
+
+.hero .categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.hero .categories p a{
+    text-decoration: none;
+    color: #fff;
+    background: #ff5a5f;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(255, 90, 95, 0.3);
+    cursor: pointer;
+}
+
+.hero .categories p a:hover  {
+    background-color: #fff;
+    color: #ff5a5f;
+    transform: translateY(-6px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive Navbar (Small Screens) */
+@media (max-width: 768px) {
+    .open-menu {
+        display: block;
+    }
+    
+
+    .navlink ul {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+       
+
+    }
+
+    .hero .categories p a {
+        font-size: 1rem;
+        padding: 10px ;
+        
+        
+        
+    }
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+/* about section */
+/* About Section */
+#about {
+    background: linear-gradient(to bottom, #1e1e1e, #3a3a3a);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.sub-header{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("./WhatsApp\ Image\ 2025-02-24\ at\ 9.51.21\ PM\ \(1\).jpeg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 5rem;
+}
+/* Section Header */
+#about h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline Effect */
+#about h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: #ffcc00;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Section Description */
+#about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Card Container */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Card */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 260px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Card Title */
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ffcc00;
+}
+
+/* Card Text */
+.card p {
+    font-size: 1rem;
+    color: #f1f1f1;
+    margin-bottom: 15px;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(255, 204, 0, 0.4);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive: Mobile Optimization */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2.5rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+       
+       /* Category Section */
+.Category {
+    margin-top: 8rem;
+    background-color: antiquewhite;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+/* Section Header */
+.section_header {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline Effect for Header */
+.section_header::after {
+    content: "";
+    width: 50%;
+    height: 4px;
+    background-color: #ff5733;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Category Container */
+.category_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    overflow-x: auto;  /* Enables horizontal scrolling for small screens */
+    padding: 1rem;
+    white-space: nowrap;
+}
+
+/* Individual Category Item */
+.category_item {
+    flex: 0 0 auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Category Title */
+.category_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    padding: 1.2rem 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Category Image */
+.category_img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.category_item:hover {
+    transform: translateY(-8px);
+}
+
+.category_item:hover .category_img {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.category_item:hover .category_title {
+    background-color: #ff5733;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .section_header {
+        font-size: 2.5rem;
+    }
+
+    .category_container {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .category_img {
+        width: 230px;
+        height: 180px;
+    }
+
+    .category_title {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+/* YOGA SECTION */
+/* Yoga Section */
+/* Yoga Section */
+#yoga {
+    background: linear-gradient(to bottom, #f5f7fa, #e2e7ec);
+    color: #333;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+/* Section Header */
+#yoga h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    color: #ff8c42;
+}
+
+/* Underline Effect */
+#yoga h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: #ff8c42;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Yoga Quote */
+.yoga-quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Yoga Description */
+.yoga-description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Yoga Grid Layout */
+.yoga-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Yoga Cards */
+.yoga-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Yoga Card Images */
+.yoga-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Card Title */
+.yoga-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ff8c42;
+}
+
+/* Card Text */
+.yoga-card p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Hover Effects */
+.yoga-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(255, 140, 66, 0.4);
+}
+
+.yoga-card:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #yoga h2 {
+        font-size: 2.5rem;
+    }
+
+    .yoga-quote {
+        font-size: 1.2rem;
+    }
+
+    .yoga-description {
+        font-size: 1rem;
+    }
+
+    .yoga-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+
+
+
+
+
+/* contact page */
+
+.contact-us {
+    padding: 50px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    max-width: 1100px;
+    margin: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact-col {
+    flex: 1;
+    margin: 20px;
+    min-width: 300px;
+}
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+.contact-info i {
+    font-size: 24px;
+    color: #1e9bff;
+    margin-right: 15px;
+}
+.contact-col form input,
+.contact-col form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.hero-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: white;
+    background: #1e9bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hero-btn:hover {
+    background: #007bff;
+}
+
+
+
+
+/* Footer section */
+.turf-footer {
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 4px solid #1e9bff;
+    width: 100%;
+}
+.footer-content h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.footer-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.socials {
+    list-style: none;
+    padding: 0;
+}
+.socials li {
+    display: inline;
+    margin: 0 10px;
+}
+.socials a {
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.socials a:hover {
+    color: #1e9bff;
+}
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+
+
+
+
+/* platform section in about page */
+.platform {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+.platform h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.platform-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.platform-card {
+    background: linear-gradient(135deg, #ff7eb3, #2bbbdc);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    color: white;
+}
+.platform-card:hover {
+    transform: translateY(-10px);
+}
+.platform-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.platform-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+
+
+
+
+
+
+/* register */
+.registration {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.register {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+   
+}
+.register h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.offer {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffdd57;
+}
+.sports div {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.sports div:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+.register-btn {
+    display: inline-block;
+    background: #ffdd57;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.register-btn:hover {
+    background: #ffcc00;
+}
+
+
+
+
+
+
+
+/* Enroll */
+.Enroll {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("./WhatsApp\ Image\ 2025-02-24\ at\ 9.51.18\ PM.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.enrol {
+    text-align: center;
+    color: #fff;
+}
+
+.enrol h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.enrol a {
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 20px;
+    display: inline-block;  /* Ensures it behaves like a button */
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.enrol a:hover {
+    background-color: #fff;
+    color: #0056b3;
+}
+
