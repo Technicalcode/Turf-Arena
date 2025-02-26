@@ -246,12 +246,21 @@ input[type="submit"]:hover {
     transition: background-color 0.3s ease-in-out;
 }
 
-#display_image{
+#display_image {
     width: 150px;
     height: 150px;
     border: 1px solid black;
     background-position: center;
     background-size: cover;
+}
+
+/* Ensure background images are printed */
+@media print {
+    #display_image {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background-color: transparent !important; /* Prevent background removal */
+    }
 }
 
     </style>
@@ -262,7 +271,7 @@ input[type="submit"]:hover {
         <h2><a href="index.html">Turf Arena Registration - IDPL, Rishikesh</a></h2>
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="494169aa-99ac-40bf-aa42-7edb80d0b4a9">
-            <div id="display_image"></div>
+            <img id="display_image" width="150" height="150" style="border:1px solid black;">
             <label for="photo">Upload Photograph:</label>
             <input type="file" id="photo"   accept="image/*" required>
            
@@ -351,12 +360,16 @@ input[type="submit"]:hover {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
 
     <script>
-        $(document).ready(function () {
-            $('#btn-print').click(function () {
-                $('#content').printThis();
-            });
-        });
-    </script>
+        $('#btn-print').click(function () {
+     $('#content').printThis({
+         importCSS: true,
+         importStyle: true,
+         loadCSS: "style.css",
+         printDelay: 500
+     });
+ });
+ </script>
+ 
     <script>
         const image_input = document.querySelector("#photo");
         var uploaded_image = "";
