@@ -185,7 +185,7 @@ input[type="submit"]:hover {
 
 @media (max-width: 376px) {
      body{
-     height: 330vh;
+     height: 360vh;
      }
     .container {
         padding: 20px;
@@ -246,7 +246,13 @@ input[type="submit"]:hover {
     transition: background-color 0.3s ease-in-out;
 }
 
-
+#display_image{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+}
 
     </style>
 </head>
@@ -256,8 +262,10 @@ input[type="submit"]:hover {
         <h2><a href="index.html">Turf Arena Registration - IDPL, Rishikesh</a></h2>
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="494169aa-99ac-40bf-aa42-7edb80d0b4a9">
+            <div id="display_image"></div>
             <label for="photo">Upload Photograph:</label>
-            <input type="file" id="photo" name="photo" accept="image/*" required>
+            <input type="file" id="photo"   accept="image/*" required>
+           
             
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
@@ -348,6 +356,18 @@ input[type="submit"]:hover {
                 $('#content').printThis();
             });
         });
+    </script>
+    <script>
+        const image_input = document.querySelector("#photo");
+        var uploaded_image = "";
+        image_input.addEventListener("change", function(){
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                uploaded_image = reader.result;
+                document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+            })
+            reader.readAsDataURL(this.files[0]);
+        })
     </script>
     
 </body>
