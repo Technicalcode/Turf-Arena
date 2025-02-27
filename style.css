@@ -16,7 +16,7 @@ html, body {
 .header {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(12, 13, 12, 0.6), rgba(15, 16, 15, 0.3)), url('./WhatsApp\ Image\ 2025-02-24\ at\ 9.51.22\ PM.jpeg');
+    /* background: linear-gradient(rgba(5, 98, 22, 0.2), rgba(3, 113, 113, 0.3)), url('./Screenshot_20250227_121038\ \(1\).jpg'); */
     /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('./den-harrson-Ethe1yefaYk-unsplash.jpg'); */
     background-size: cover;
     background-position: center;
@@ -26,10 +26,21 @@ html, body {
     position: relative;
     
     
-    
+
    
    
 
+}
+
+/* vedio */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 
@@ -152,7 +163,7 @@ nav {
     text-decoration: none;
     color: #fff;
     background: #ff5a5f;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 6px;
     font-size: 1.3rem;
     font-weight: 500;
@@ -408,7 +419,7 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
-    padding: 1.2rem 0;
+    padding: 1rem 0;
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     text-transform: uppercase;
@@ -438,7 +449,7 @@ nav {
 }
 
 .category_item:hover .category_title {
-    background-color: #ff5733;
+    background-color: antiquewhite;
 }
 
 /* Responsive for Mobile */
@@ -460,7 +471,70 @@ nav {
     .category_title {
         font-size: 1.2rem;
     }
+    
 }
+@media (max-width: 450px) { 
+    .category_container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start; /* Start scrolling from left */
+        gap: 2rem;
+        overflow-x: auto; /* Enables horizontal scrolling */
+        padding: 1rem;
+        white-space: nowrap;
+        scrollbar-width: thin; /* Make scrollbar visible but thinner */
+        -ms-overflow-style: none; /* Hides scrollbar in IE/Edge */
+    }
+
+    /* Custom Scrollbar for WebKit Browsers */
+    .category_container::-webkit-scrollbar {
+        height: 8px; /* Increases scrollbar height */
+    }
+
+    .category_container::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.5); /* Scrollbar color */
+        border-radius: 2px;
+    }
+
+    /* Individual Category Item */
+    .category_item {
+        flex: 0 0 80%; /* Increase width so fewer items appear at once */
+        max-width: 300px; /* Limits size */
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Ensure Image Fills Container */
+    .category_item img {
+        width: 100%;
+        height: auto; /* Maintains aspect ratio */
+        display: block;
+    }
+
+    /* Category Title Styling */
+    .category_title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+
+
+
+
 
 
 
