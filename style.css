@@ -80,7 +80,7 @@ html, body {
 .header {
     width: 100%;
     min-height: 100vh;
-    /* background: linear-gradient(rgba(5, 98, 22, 0.2), rgba(3, 113, 113, 0.3)), url('./Screenshot_20250227_121038\ \(1\).jpg'); */
+    background: linear-gradient(rgba(5, 98, 22, 0.2), rgba(3, 113, 113, 0.3)), url('./Screenshot_20250227_121038\ \(1\).jpg');
     /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('./den-harrson-Ethe1yefaYk-unsplash.jpg'); */
     background-size: cover;
     background-position: center;
@@ -97,7 +97,7 @@ html, body {
 }
 
 /* vedio */
-.bg-video {
+/* .bg-video {
     position: fixed;
     top: 0;
     left: 0;
@@ -105,7 +105,7 @@ html, body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-}
+} */
 
 
 /* Navbar */

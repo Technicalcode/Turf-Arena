@@ -256,29 +256,12 @@ input[type="submit"]:hover {
 
 /* Ensure background images are printed */
 @media print {
-    @page {
-        size: A4;
-        margin: 20mm;
-    }
-
-    body {
-        width: 210mm; /* A4 width */
-        height: 297mm; /* A4 height */
-    }
-
-    /* Ensure background images are printed */
     #display_image {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        background-color: transparent !important;
-    }
-
-    /* Hide buttons during printing */
-    .button, #btn-print {
-        display: none;
+        background-color: transparent !important; /* Prevent background removal */
     }
 }
-
 
     </style>
 </head>
